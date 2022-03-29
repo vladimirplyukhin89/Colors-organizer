@@ -9,3 +9,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+form > input, 
+form > button {
+  cursor: pointer;
+}

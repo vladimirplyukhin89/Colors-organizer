@@ -1,4 +1,5 @@
 import useInput from '../hooks/useInput';
+import '../App.css';
 
 const AddColorForm = ({ onNewColor = f => f }) => {
     const [titleProps, resetTitle] = useInput('');
@@ -13,7 +14,8 @@ const AddColorForm = ({ onNewColor = f => f }) => {
     };
 
     return (
-        <form onSubmit={submit}>
+        <form onSubmit={submit}
+            style={{ padding: '1rem' }}>
             <input
                 {...titleProps}
                 type="text"
