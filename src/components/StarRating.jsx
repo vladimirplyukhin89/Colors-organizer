@@ -2,11 +2,11 @@ import Star from "./Star";
 
 const createArray = length => [...Array(length)];
 
-const StarRating = ({
+function StarRating({
     totalStars = 5,
     selectedStars = 0,
     onRate = f => f
-}) => {
+}) {
     return (
         <div>
             {

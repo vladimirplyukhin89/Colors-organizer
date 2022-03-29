@@ -1,18 +1,19 @@
 import StarRating from "./StarRating";
 import { FaTrash } from 'react-icons/fa';
+import { useColors } from './ColorProvider';
 
-const Color = ({
+function Color({
     id,
     title,
     color,
     rating,
-    onRemove = f => f,
-    onRate = f => f }) => {
+}) {
+    const { rateColor, removeColor } = useColors();
     return (
         <section style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
             <h1>{title}</h1>
             <button
-                onClick={() => onRemove(id)}
+                onClick={() => removeColor(id)}
                 style={{ cursor: 'pointer' }}
             >
                 <FaTrash />
@@ -20,7 +21,7 @@ const Color = ({
             <div style={{ height: 50, backgroundColor: color }} />
             <StarRating
                 selectedStars={rating}
-                onRate={rating => onRate(id, rating)}
+                onRate={rating => rateColor(id, rating)}
             />
         </section>
     );

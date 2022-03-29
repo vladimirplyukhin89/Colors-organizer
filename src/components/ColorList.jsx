@@ -1,19 +1,18 @@
-import { useContext } from 'react';
-import { ColorContext } from '../index';
+import { useColors } from './ColorProvider';
 import Color from "./Color";
 
-const ColorList = () => {
-    const { colors } = useContext(ColorContext);
+
+function ColorList() {
+    const { colors } = useColors();
     if (!colors.length) return <div>No colors listed.</div>;
+
     return (
         <div>
-            {
-                colors.map(color =>
-                    <Color
-                        key={color.id}
-                        {...colors}
-                    />)
-            }
+            {colors.map(color =>
+                <Color
+                    key={color.id}
+                    {...color} />
+            )}
         </div>
     );
 };

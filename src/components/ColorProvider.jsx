@@ -6,9 +6,9 @@ const ColorContext = createContext();
 export const useColors = () => useContext(ColorContext);
 
 
-const ColorProvider = ({ children }) => {
+function ColorProvider({ children }) {
     const [colors, setColors] = useState(colorData);
-
+    //debugger;
     const addColor = (title, color) =>
         setColors([
             ...colors,
@@ -28,7 +28,7 @@ const ColorProvider = ({ children }) => {
     const removeColor = id => setColors(colors.filter(color => color.id !== id));
 
     return (
-        <ColorContext.Provider value={{ colors, addColor, rateColor, removeColor }}>
+        <ColorContext.Provider value={{ colors, addColor, removeColor, rateColor }}>
             {children}
         </ColorContext.Provider>
     );
