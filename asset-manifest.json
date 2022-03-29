@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Colors-organizer/static/css/main.0a9dbc9e.css",
+    "main.js": "/Colors-organizer/static/js/main.734ebca8.js",
+    "static/js/787.cffe279d.chunk.js": "/Colors-organizer/static/js/787.cffe279d.chunk.js",
+    "index.html": "/Colors-organizer/index.html",
+    "main.0a9dbc9e.css.map": "/Colors-organizer/static/css/main.0a9dbc9e.css.map",
+    "main.734ebca8.js.map": "/Colors-organizer/static/js/main.734ebca8.js.map",
+    "787.cffe279d.chunk.js.map": "/Colors-organizer/static/js/787.cffe279d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0a9dbc9e.css",
+    "static/js/main.734ebca8.js"
+  ]
+}
